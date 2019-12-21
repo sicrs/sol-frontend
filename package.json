@@ -1,0 +1,14 @@
+{
+  "name": "sol-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sicrs/sol-frontend",
+  "author": "Seb <thesicrs@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mithril": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/mithril": "^2.0.2"
+  }
+}
