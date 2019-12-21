@@ -3,7 +3,8 @@ import { Event } from '../Models'
 
 interface DialAttributes {
     events: Event[];
-    viewBoxSize: number;
+    viewBoxXLength: number;
+    viewBoxYLength: number;
 }
 
 export default class Dial implements m.ClassComponent<DialAttributes> {
@@ -13,9 +14,9 @@ export default class Dial implements m.ClassComponent<DialAttributes> {
     yCoord: number;
 
     constructor({ attrs }: m.CVnode<DialAttributes>) {
-        this.radius = attrs.viewBoxSize * 0.4;
-        this.xCoord = attrs.viewBoxSize / 2;
-        this.yCoord = attrs.viewBoxSize / 2;
+        this.radius = Math.min(attrs.viewBoxXLength, attrs.viewBoxYLength) * 0.4;
+        this.xCoord = attrs.viewBoxXLength / 2;
+        this.yCoord = attrs.viewBoxYLength / 2;
         this.strokeDashArray = this.radius * 2 * Math.PI;
     }
 
@@ -48,7 +49,7 @@ export default class Dial implements m.ClassComponent<DialAttributes> {
     }
 
     view({ attrs }: m.CVnode<DialAttributes>) {
-        return m('svg', { viewBox: `0 0 ${attrs.viewBoxSize} ${attrs.viewBoxSize}` }, [
+        return m('svg', { viewBox: `0 0 ${attrs.viewBoxXLength} ${attrs.viewBoxYLength}` }, [
             m(Indicator, { xCoord: this.xCoord, yCoord: this.yCoord, color: "white", radius: this.radius }),
             ...this.generateEventCircles(attrs.events)
         ])
