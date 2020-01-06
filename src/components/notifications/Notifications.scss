@@ -1,0 +1,41 @@
+@import '../theme';
+@import '@material/card/mdc-card';
+@import '@material/button/mdc-button';
+@import '@material/ripple/mdc-ripple';
+
+.notification {
+    $mdc-theme-on-primary: #CFD0D6;
+    @include mdc-card-outline(#333333, 1.5px);
+    @include mdc-card-shape-radius(2px, false);
+    @include mdc-card-fill-color($mdc-theme-surface);
+    padding:12px 8px 8px 16px;
+    margin: 8px 0;
+    color: $mdc-theme-on-surface;
+}
+
+.notification-title {
+    text-transform: uppercase;
+    font: 500 0.75rem/1.7 Roboto;
+    letter-spacing: 0.025rem;
+    padding-bottom: 4px; 
+}
+
+.notification-message {
+    font-family: Roboto;
+    font-size: 0.85rem;
+    padding-bottom: 6px;
+}
+
+.notification-actions {
+    display: inline-flex;
+    justify-content: flex-end;
+    order: 1;
+}
+
+.notification-actions button {
+    font-size: 0.775rem;
+}
+
+.notification-dismiss {
+    @include mdc-button-shape-radius(0px);
+}
