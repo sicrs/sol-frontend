@@ -2,13 +2,29 @@
   "name": "sol-frontend",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/sicrs/sol-frontend",
+  "repository": "https://github.com/sicrs/sol-frontend.git",
   "author": "Seb <thesicrs@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@material/button": "^4.0.0",
+    "@material/card": "^4.0.0",
+    "@material/elevation": "^4.0.0",
+    "@material/ripple": "^4.0.0",
+    "@material/theme": "^4.0.0",
+    "@material/touch-target": "^4.0.0",
     "mithril": "^2.0.4"
   },
   "devDependencies": {
-    "@types/mithril": "^2.0.2"
+    "@types/mithril": "^2.0.2",
+    "css-loader": "^3.4.1",
+    "extract-loader": "^3.1.0",
+    "file-loader": "^5.0.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.5"
   }
 }
